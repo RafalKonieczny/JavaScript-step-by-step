@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //zmienna temperature, wartości -10, 0, 10, 20, 30, 40
+        // informacja ze względu na temperature czy jest :
+        //-10 - b.zimno, 0 - zimno, 10 - wiosna, 20 - lato, 30 - gorąco, 40 - upał
+        // dla temperature < -10 zostajemy w domu
+        // dla temperature > 40 zostajemy też w domu
+        
+        let temp = 21;
+        
+        // 1 wesja z if else if
+        if (temp < -10) {
+            console.log("Zostajemy w domu");    
+        } else if (temp == -10) {
+            console.log("bardzo zimno");   
+        } else if (temp == 0) {
+            console.log("zimno");
+        } else if (temp == 10) {
+            console.log("wiosna");
+        } else if (temp == 20) {
+            console.log("lato");
+        } else if (temp == 30) {
+            console.log("gorąco");
+        } else if (temp == 40) {
+            console.log("upał");
+        } else if (temp > 40) {
+            console.log("Zostajemy w domu");
+        };
+
+        // 2 wersja switch
+        switch (temp) {
+            case -10:
+                console.log("bardzo zimno"); 
+                break;
+            case 0:
+                console.log("zimno");
+                break;
+            case 10:
+                console.log("wiosna");
+                break;
+            case 20:
+                console.log("lato");
+                break;
+            case 30: 
+                console.log("gorąco");
+                break;
+            case 40: 
+                console.log("upał");
+                break;
+            case (temp < -10):
+                console.log("Zostajemy w domu");
+                break;
+            case (temp > 40): 
+                console.log("Zostajemy w domu");
+        }
+    </script>
+</body>
+</html>

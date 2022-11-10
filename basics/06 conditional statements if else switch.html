@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Sprawdzenie liczby
+        let data = 6;
+
+        if (data > 5) {
+            console.log("Liczba w data jest wieksza od 5");
+        };
+
+        if (data == 5) {
+            console.log("Liczba w data jest równa 5");
+        };
+
+        if (data < 5) {
+            console.log("Liczba w data jest mniejsza od 5");
+        };
+
+        // Głosowanie w wyborach
+        let age = 20;
+
+        if (age >= 18) {
+            console.log("Może głosować");
+        };
+        
+        if (age < 18) {
+            console.log("Nie może głosować");
+            console.log("Musi poczekać do 18 urodzin");
+        };
+
+        //inny zapis z użyciem if else
+        age = 12;
+
+        if (age >= 18) {
+            console.log("Może głosować");
+        } else {
+            console.log("Nie może głosować");
+            console.log("Musi poczekać do 18 urodzin");
+        };
+
+        // Ranking sportowy
+        let sportRanking = 1;
+
+        if (sportRanking == 1) {
+            console.log("Pierwsze miejsce!");
+        } else if (sportRanking == 2) {
+            console.log("Drugie miejsce!");
+        } else if (sportRanking == 3) {
+            console.log("Trzecie miejsce!");
+        } else {
+            console.log("Niestety, brak medalu, spróbuj za rok.");
+        };
+
+        // operacja matematyczna
+
+        const x = 10;
+        const y = 99;
+
+        if (x > y) { //true
+            console.log("x jest większe od y");
+        } else { //false
+            console.log("x jest mniejsze od y");
+        };
+
+        // prędkosć auta
+        let topSpeed = 150;
+
+        switch (topSpeed) {
+            case 100:
+                console.log("Mała prędkość max");
+                break;
+            case 150:
+                console.log("Prędkość 150 km/h");   
+                break;
+            case 200:
+                console.log("Prędkość 200 km/h");   
+                break;
+            case 250:
+                console.log("Prędkość 250 km/h !");   
+                break;
+            case 260:
+            case 270:
+            case 280:
+                console.log("Prędkość powyżej 250km/h !!!");
+                break;
+            default:
+                console.log("Brak informacji dla tej prędkości")    
+        };
+
+
+
+    </script>
+</body>
+</html>

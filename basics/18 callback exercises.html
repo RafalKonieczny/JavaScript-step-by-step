@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button1">double click me</button>
+
+    <script>
+        // podpiąc callback pod button1 z zdarzeniem dblclick
+        // wyświetlić informację o podwójnym kliknięciu
+
+        function dblButtonClicked(event) {
+            console.log("Przycisk kliknięty 2 razy!");
+            
+            //event to obiekt zdarzenia, informacje o zdarzeniu
+            console.log(event);
+            console.log(event.target);
+            console.log(event.target.id);
+        }
+
+        document.getElementById("button1").addEventListener("dblclick", dblButtonClicked)
+    </script>
+</body>
+</html>

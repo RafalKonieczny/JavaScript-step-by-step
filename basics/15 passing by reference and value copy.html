@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = 10;
+        let info = data; // w typach prostych jak liczny, tekst mamy kopiowanie wartości
+        console.log(data,info); // 10, 10
+        data = 33;
+        console.log(data,info); // 33, 10 - dwa oddzielne miejsca w pamięci z danymi
+
+        let obj = {
+            a: 10
+        };
+
+        let test = obj; // kiedy przypisujemy obiekt do zmiennej/ stałej
+                        // to ni kopiujemy wartości tylko kopiujemy
+                        // referencje, czyli ten sam adress w pamięci
+                        // który bedzie dostepny dla zmiennej test
+                        // inaczej mówiąc zmienne test i obj wskazują
+                        // na ten sam obiekt w pamięci!
+                        // to jest własnie referencja
+
+        console.log(obj.a, test.a); // 10, 10
+        obj.a = 33;
+        console.log(obj.a, test.a); // 33, 33 to jest dowód że obie zmienne
+                                    // wskazują na to samo miejsce w pamięci                  
+        
+        // typy prostych są przekazywane przez wartość
+        // czyli są to ich kopie np liczny, stringi itd
+        function something(a, b) {
+            a = 80;
+            return a + b;
+        };
+
+        let someA = 23;
+        let someB = 40;
+        console.log(something(someA, someB));
+
+        console.log(someA, someB); // nadal wartości 23 i 40 
+
+        let objA = {
+            a: 15
+        };
+        
+        let objB = {
+            b: 70
+        };
+
+        function foo(obj1, obj2) {
+            objA.a = 30;
+            return objA.a + objB.b;
+        };
+
+        console.log(foo(objA, objB));   // objekty przekazane są 
+                                        // przez referencję
+
+        console.log(objA.a, objB.b);    // 30, 70 wiec wartość w obiekcie 30 została
+                                        // nadpisana z poziomu wywołanej funkcji
+                                        // Czyli obiekty nie są nadpisywane przez wartość
+
+        let arrTest = []; // pusta tablica
+        let arr = [1, 2, 3, 4]; // tablica to też obiekt
+        console.log(arr[2]);  
+        
+        function checkArr(arr) {
+            arr[0] = 99;    // tablica to obiekt wiec bedzia ta wartość nadpisana
+            arr.push(8);    // dodanie elementu na koniec tablicy
+        }
+
+        checkArr(arr);
+        console.log(arr);   // [99, 2, 3, 4, 8]
+                            // tablica została zmodyfikowana ponieważ
+                            // jest również obiektem
+
+    </script>
+</body>
+</html>

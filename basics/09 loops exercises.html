@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // wartość początkowa licznika to -2
+        // licznik sprawdzamy czy jest mniejszy równy 2
+        // w każdej iteracji musimy sprawdzić za pomocą if 
+        // i wyświetlić informację czy liczba jest dodatnia, ujemna czy zero
+    
+        let number = -2;
+
+        while (number <= 2) {
+            if (number < 0) {
+                console.log("number mniejszy od zera", number);
+            } else if (number == 0) {
+                console.log("number ma wartość zero", number);
+            } else if (number > 0) {
+                console.log("number większy od zera", number);
+            };
+            number++;
+        }; 
+
+        for (let num = -2; num <= 2; num++) {
+            if (num < 0) {
+                console.log("num mniejszy od zera", num);
+            } else if (num == 0) {
+                console.log("num ma wartość zero", num);
+            } else if (num > 0) {
+                console.log("num większy od zera", num);
+            };   
+        }
+    </script>
+</body>
+</html>

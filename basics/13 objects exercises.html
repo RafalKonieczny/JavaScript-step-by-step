@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // tworzymy obekt person
+        // właściwości: imię, nazwisko, wiek, miasto, kod pocztowy, kraj
+        // +metoda: getName powinna zwrócić np name + " " + surname
+
+        let person = {
+            name: "Rafał",
+            surname: "Konieczny",
+            age: 35,
+            address: {
+            city: "Poznań",
+            zipCode: "61-251",
+            country: "Poland",
+            },
+
+            getName: function() {
+                return this.name + " " + this.surname;
+            }    
+        };
+
+        console.log(person.getName());
+        console.log(person.address);
+
+        function getNewPerson(name, surname, age) {
+            return {
+                name: name,
+                surname: surname,
+                age: age,
+            };
+        };
+
+        const user = getNewPerson("Ania", "Kowalska", 29);
+        console.log(user);
+
+        const user2 = getNewPerson("Olek", "K.", 33)
+        console.log(user2);
+        
+    </script>
+</body>
+</html>
